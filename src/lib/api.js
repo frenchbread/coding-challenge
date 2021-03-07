@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const DEVELOPER = 'DAMIR_TEST'
+const DEVELOPER = 'DAMIRMUTAFIN'
 
 const axe = axios.create({
   baseURL: 'https://uxcandy.com/~shapoval/test-task-backend/v2',

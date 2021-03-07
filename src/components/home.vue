@@ -5,7 +5,7 @@
         list ({{ total_task_count }})
       </b>
 
-      <span>
+      <span v-if="total_task_count > 0">
         filter by
         <select v-model="param__sort_by">
           <option value="id">id</option>
@@ -20,7 +20,7 @@
       </span>
     </div>
 
-    <div class="list">
+    <div v-if="total_task_count > 0" class="list">
 
       <task v-for="task in tasks" :key="task._id" :task="task"></task>
 

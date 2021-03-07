@@ -6,11 +6,7 @@ const state = {
   sort_direction: 'asc',
   tasks_loading: false,
   tasks: [],
-  total_task_count: 0,
-  // form_error: false,
-  // form_error_message: {},
-  // form_success: false,
-  // task_is_creating: false,
+  total_task_count: 0
 }
 
 const mutations = {

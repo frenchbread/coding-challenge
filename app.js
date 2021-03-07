@@ -13,3 +13,5 @@ app.use(cors())
 app.use(serve(path.resolve('dist')))
 
 app.listen(port, host)
+
+console.log(`${host} ${port}`)

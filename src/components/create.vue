@@ -2,7 +2,7 @@
   <div class="create">
     <form v-if="form_status !== 'ok'" class="form" @submit.prevent="create_task()">
 
-      <h2>create task</h2>
+      <h2>Создать задачу</h2>
 
       <fieldset class="form-group">
         <label for="username">USERNAME</label>
@@ -23,15 +23,20 @@
 
         <button class="btn btn-primary btn-block" type="submit">
           <span v-if="form_is_loading" class="loading"></span>
-          create task
+          Отправить
         </button>
 
       </div>
 
+      <div class="gap"></div>
+
       <div v-if="form_status === 'error'" class="alert alert-error">{{ get_parsed_error_text() }}</div>
 
     </form>
-    <div v-else-if="form_status === 'ok'" class="success-message">
+    <div v-else-if="form_status === 'ok'" class="align-center">
+
+      <div class="gap gap-big"></div>
+
       <b class="alert alert-success">Задание было усшешно добавлено!</b>
 
       <br><br><br>
@@ -104,24 +109,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
-.create {
-
-  .form {
-    padding-top: 2rem;
-    margin: auto;
-
-    .alert {
-      margin-top: 1rem;
-      white-space: break-spaces;
-    }
-  }
-
-  .success-message {
-    margin-top: 3rem;
-    text-align: center;
-  }
-}
-
-</style>
+<style lang="scss" scoped></style>

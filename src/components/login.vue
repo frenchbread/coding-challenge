@@ -23,13 +23,17 @@
 
       </div>
 
+      <div class="gap"></div>
+
       <div v-if="form_status === 'error'" class="alert alert-error">{{ get_parsed_error_text() }}</div>
 
     </form>
-    <div v-else-if="form_status === 'ok'" class="success-message">
+    <div v-else-if="form_status === 'ok'" class="align-center">
+      <div class="gap gap-big"></div>
+
       <b class="alert alert-success">Вы успешно авторизовались!</b>
 
-      <br><br><br>
+      <div class="gap gap-big"></div>
 
       <button class="btn btn-primary" @click.prevent="$router.push({ name: 'home' })">Перейти на главную</button>
     </div>
@@ -90,22 +94,5 @@ export default {
 
 <style lang="scss" scoped>
 
-.create {
-
-  .form {
-    padding-top: 2rem;
-    margin: auto;
-
-    .alert {
-      margin-top: 1rem;
-      white-space: break-spaces;
-    }
-  }
-
-  .success-message {
-    margin-top: 3rem;
-    text-align: center;
-  }
-}
 
 </style>

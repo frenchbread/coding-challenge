@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <title><%= html.title %></title>
+    <!-- <script>
+    // Add `node_modules/` to global paths so `require` works properly in development
+    <% if (html.nodeModulesPath) { %>
+      require('module').globalPaths.push('<%= html.nodeModulesPath %>')
+    <% } %>
+    </script> -->
+  </head>
+  <body class="hack">
+    <div id="app"></div>
+    <!-- webpack builds are automatically injected -->
+  </body>
+</html>
